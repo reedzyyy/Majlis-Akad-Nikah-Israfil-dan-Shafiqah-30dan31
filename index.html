@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jemputan Majlis Perkahwinan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <div class="portrait">
+    <img src="https://i.pinimg.com/736x/34/1f/23/341f23fafb3b820b5077ab7946da34cc.jpg" alt="Groom" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    <p class="portrait-name">Mohd Israfil Redzuan</p>
+  </div>
+  <div style="text-align: center;">
+    <h1>Mohd Israfil Redzuan & Nurul Shafiqah</h1>
+    <p>Walimatul Urus</p>
+    <p>30 & 31 August 2026</p>
+  </div>
+  <div class="portrait">
+    <img src="https://i.pinimg.com/1200x/7b/38/0c/7b380c58d8af0fb64afa4c868f585688.jpg" alt="Bride" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    <p class="portrait-name">Nurul Shafiqah</p>
+  </div>
+</header>
+
+<nav class="scroll-nav">
+  <a href="#invitation">Invitation</a>
+  <a href="#details">Details</a>
+  <a href="#countdown">Countdown</a>
+</nav>
+
+<section id="invitation">
+  <h2>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+  <p>Dengan penuh kesyukuran ke hadrat Ilahi, kami mempersilakan Dato’/Datin/Tuan/Puan/Encik/Cik seisi keluarga ke majlis perkahwinan Mohd Israfil Redzuan Bin Mohd Rizal & Nurul Shafiqah Binti Haniff yang akan berlangsung pada dan tempat seperti berikut:-</p>
+</section>
+
+<section id="details" class="details">
+  <h2>Wedding Details</h2>
+  <h3>Majlis Akad Nikah dan Walimatul Urus (Majlis Sanding Pihak Perempuan)</h3>
+  <p><strong>Date:</strong> 30 August 2026</p>
+  <p><strong>Time:</strong> 11:00 pagi</p>
+  <p><strong>Venue:</strong> <a href="https://www.google.com/maps/@5.9568759,116.080461,17z" target="_blank">Dewan Wisma Pertanian</a></p>
+  <h3>Majlis Sanding (Pihak Lelaki)</h3>
+  <p><strong>Date:</strong> 31 August 2026</p>
+  <p><strong>Time:</strong> 11:00 pagi</p>
+  <p><strong>Venue:</strong> <a href="https://www.google.com/maps/@6.3552406,116.4310738,10z" target="_blank">Kg. Pantai Emas, Kota</a></p>
+</section>
+
+<section>
+  <h2>Countdown</h2>
+  <div id="countdown" class="countdown"></div>
+</section>
+
+<footer>
+  <p>Made with ❤️ for our special day</p>
+</footer>
+
+<script>
+  // Countdown Timer
+  const weddingDate = new Date("AUG 30, 2026 11:00:00").getTime();
+
+  const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("countdown").innerHTML =
+      days + "d " + hours + "h " + minutes + "m ";
+
+    if (distance < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "It's Wedding Time!";
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
