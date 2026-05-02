@@ -305,6 +305,14 @@ a:hover {
     padding: 30px 16px;
   }
 
+  .floating-hearts span {
+    font-size: 1.5rem;
+  }
+
+  .floating-hearts span:nth-child(n+6) {
+    display: none;
+  }
+
   .scroll-nav {
     position: static;
     transform: none;
@@ -358,6 +366,14 @@ a:hover {
 
   section {
     padding: 22px 12px;
+  }
+
+  .floating-hearts span {
+    font-size: 1rem;
+  }
+
+  .floating-hearts span:nth-child(n+4) {
+    display: none;
   }
 
   .scroll-nav {
