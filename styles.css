@@ -31,9 +31,9 @@ header {
   min-height: 240px;
   padding: 20px 16px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 16px;
   max-width: 1180px;
   margin: 28px auto 0;
@@ -54,19 +54,24 @@ header::after {
 }
 
 header > div {
-  flex: 1 1 360px;
-  min-width: 260px;
+  flex: 1 1 320px;
+  min-width: 0;
   max-width: 620px;
   text-align: center;
 }
 
 .portrait {
   flex: 0 0 auto;
+  width: 120px;
 }
 
 header img {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 45px rgba(151, 58, 91, 0.18);
   object-fit: cover;
   border-radius: 50%;
   border: 6px solid rgba(255, 255, 255, 0.9);
@@ -235,26 +240,27 @@ a:hover {
 
 @media (max-width: 768px) {
   header {
-    padding: 24px 16px;
-    justify-content: center;
+    padding: 20px 14px;
+    justify-content: space-between;
     align-items: center;
-    min-height: auto;
+    min-height: 200px;
   }
 
   header > div {
-    width: 100%;
-    max-width: 100%;
+    flex: 1 1 220px;
+    min-width: 0;
+    max-width: 38%;
   }
 
   .portrait {
     width: 100%;
-    max-width: 220px;
-    margin: 0 auto;
+    max-width: 140px;
+    margin: 0;
   }
 
   header img {
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
   }
 
   header h1 {
@@ -290,18 +296,25 @@ a:hover {
 
 @media (max-width: 480px) {
   header {
-    padding: 22px 12px;
-    flex-direction: column;
-    min-height: auto;
+    padding: 18px 12px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 180px;
+  }
+
+  header > div {
+    flex: 1 1 180px;
+    max-width: 40%;
   }
 
   .portrait {
-    max-width: 180px;
+    max-width: 110px;
   }
 
   header img {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
   }
 
   header h1 {
