@@ -313,6 +313,10 @@ a:hover {
     display: none;
   }
 
+  .floating-hearts {
+    display: none;
+  }
+
   .scroll-nav {
     position: static;
     transform: none;
