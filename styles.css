@@ -88,15 +88,15 @@
   }
 
   .blue {
-    top: 10px;
-    right: -25px;
-    filter: hue-rotate(240deg);
+    top: -10px;
+    right: 100px;
+    filter: hue-rotate(226deg);
   }
 
   .pink {
-    top: 10px;
-    left: -25px;
-    filter: hue-rotate(300deg);
+    top: -10px;
+    left: 100px;
+    filter: hue-rotate(346deg);
   }
 
   header h1 {
