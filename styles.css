@@ -34,11 +34,9 @@ header {
   flex-wrap: nowrap;
   gap: 16px;
   max-width: 1180px;
-  margin: 28px auto 0;
   box-shadow: 0 24px 60px rgba(165, 74, 108, 0.12);
   position: relative;
   overflow: hidden;
-  border-radius: 28px;
 }
 
 header::after {
@@ -68,7 +66,6 @@ header img {
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, 0.9);
   box-shadow: 0 20px 45px rgba(151, 58, 91, 0.18);
 }
 
@@ -92,7 +89,6 @@ header h1 {
   margin: 0;
   line-height: 1.05;
   color: #ffffff;
-  letter-spacing: 0.02em;
 }
 
 header p {
@@ -331,3 +327,4 @@ a:hover {
     font-size: 0.95rem;
   }
 }
+ 
