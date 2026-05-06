@@ -6,6 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="styles.css">
+  <style>
+    #visitor-counter {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      font-size: 12px;
+      opacity: 0.4;
+      color: #333;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+      pointer-events: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -50,11 +63,22 @@
   <div id="countdown" class="countdown"></div>
 </section>
 
+<div id="visitor-counter"></div>
+
 <footer>
   <p>Made with ❤️ for our special day</p>
 </footer>
 
 <script>
+  // Visitor Counter
+  function initVisitorCounter() {
+    let visitCount = localStorage.getItem('visitCount');
+    visitCount = visitCount ? parseInt(visitCount) + 1 : 1;
+    localStorage.setItem('visitCount', visitCount);
+    document.getElementById('visitor-counter').textContent = `Visitors: ${visitCount}`;
+  }
+  initVisitorCounter();
+
   // Countdown Timer
   const weddingDate = new Date("AUG 30, 2026 11:00:00").getTime();
 
