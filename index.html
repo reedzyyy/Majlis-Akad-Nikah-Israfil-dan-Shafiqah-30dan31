@@ -70,32 +70,6 @@
 </footer>
 
 <script>
-  // Visitor Counter - Count Unique IP Addresses
-  async function initVisitorCounter() {
-    try {
-      // Fetch visitor's IP address
-      const response = await fetch('https://api.ipify.org?format=json');
-      const data = await response.json();
-      const visitorIP = data.ip;
-
-      // Get existing IPs from localStorage
-      let ips = JSON.parse(localStorage.getItem('visitorIPs') || '[]');
-      
-      // Add IP if not already present
-      if (!ips.includes(visitorIP)) {
-        ips.push(visitorIP);
-        localStorage.setItem('visitorIPs', JSON.stringify(ips));
-      }
-
-      // Display unique IP count
-      document.getElementById('visitor-counter').textContent = ` Unique Visitors: ${ips.length}`;
-    } catch (error) {
-      // Fallback if IP fetch fails
-      document.getElementById('visitor-counter').textContent = ` Visitors: Loading...`;
-    }
-  }
-  initVisitorCounter();
-
   // Countdown Timer
   const weddingDate = new Date("AUG 30, 2026 11:00:00").getTime();
 
