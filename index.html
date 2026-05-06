@@ -11,9 +11,6 @@
 
 <body>
 
-<!-- Background Music - YouTube Video -->
-<div id="youtube-player" style="position: fixed; bottom: -9999px; left: -9999px; width: 1px; height: 1px; z-index: -1000;"></div>
-
 <script>
  
 </script>
@@ -85,51 +82,6 @@
       document.getElementById("countdown").innerHTML = "It's Wedding Time!";
     }
   }, 1000);
-
-   // Load YouTube IFrame API
-  const tag = document.createElement('script');
-  tag.src = 'https://www.youtube.com/iframe_api';
-  document.body.appendChild(tag);
-
-  let player;
-
-  // YouTube Player Ready
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtube-player', {
-      width: '1',
-      height: '1',
-      videoId: 'hB0UmgZF0nw',
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      },
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        loop: 1,
-        modestbranding: 1
-      }
-    });
-  }
-
-  function onPlayerReady(event) {
-    event.target.setVolume(50); // Set volume to 50%
-    event.target.playVideo();
-  }
-
-  function onPlayerStateChange(event) {
-    // Loop the video when it ends
-    if (event.data === YT.PlayerState.ENDED) {
-      event.target.playVideo();
-    }
-  }
-
-  // Allow clicking to unmute/mute volume
-  document.addEventListener('click', function() {
-    if (player && player.getVolume() === 0) {
-      player.setVolume(50);
-    }
-  });
 </script>
 
 
