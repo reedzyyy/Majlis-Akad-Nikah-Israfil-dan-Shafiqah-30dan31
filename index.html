@@ -6,19 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="styles.css">
-  <style>
-    #visitor-counter {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      font-size: 12px;
-      opacity: 0.4;
-      color: #333;
-      font-family: Arial, sans-serif;
-      z-index: 1000;
-      pointer-events: none;
-    }
-  </style>
+ 
 </head>
 
 <body>
@@ -27,50 +15,7 @@
 <div id="youtube-player" style="position: fixed; bottom: -9999px; left: -9999px; width: 1px; height: 1px; z-index: -1000;"></div>
 
 <script>
-  // Load YouTube IFrame API
-  const tag = document.createElement('script');
-  tag.src = 'https://www.youtube.com/iframe_api';
-  document.body.appendChild(tag);
-
-  let player;
-
-  // YouTube Player Ready
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtube-player', {
-      width: '1',
-      height: '1',
-      videoId: 'hB0UmgZF0nw',
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      },
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        loop: 1,
-        modestbranding: 1
-      }
-    });
-  }
-
-  function onPlayerReady(event) {
-    event.target.setVolume(50); // Set volume to 50%
-    event.target.playVideo();
-  }
-
-  function onPlayerStateChange(event) {
-    // Loop the video when it ends
-    if (event.data === YT.PlayerState.ENDED) {
-      event.target.playVideo();
-    }
-  }
-
-  // Allow clicking to unmute/mute volume
-  document.addEventListener('click', function() {
-    if (player && player.getVolume() === 0) {
-      player.setVolume(50);
-    }
-  });
+ 
 </script>
 
 <header>
@@ -116,8 +61,7 @@
 <div id="visitor-counter"></div>
 
 <footer>
-  <p>Made with ❤️ for our special day</p>
-<img src="https://png.pngtree.com/png-clipart/20230330/original/pngtree-blue-and-pink-watercolor-flowers-png-image_9010919.png" alt="flower1" width="200" height="200" style="position: absolute; bottom: 0; right: 0; opacity: 0.5;">
+  <p>Made with ❤️ for our special day</p> 
 
 </footer>
 
@@ -141,7 +85,53 @@
       document.getElementById("countdown").innerHTML = "It's Wedding Time!";
     }
   }, 1000);
+
+   // Load YouTube IFrame API
+  const tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  document.body.appendChild(tag);
+
+  let player;
+
+  // YouTube Player Ready
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtube-player', {
+      width: '1',
+      height: '1',
+      videoId: 'hB0UmgZF0nw',
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      },
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        loop: 1,
+        modestbranding: 1
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.setVolume(50); // Set volume to 50%
+    event.target.playVideo();
+  }
+
+  function onPlayerStateChange(event) {
+    // Loop the video when it ends
+    if (event.data === YT.PlayerState.ENDED) {
+      event.target.playVideo();
+    }
+  }
+
+  // Allow clicking to unmute/mute volume
+  document.addEventListener('click', function() {
+    if (player && player.getVolume() === 0) {
+      player.setVolume(50);
+    }
+  });
 </script>
+
 
 </body>
 </html>
