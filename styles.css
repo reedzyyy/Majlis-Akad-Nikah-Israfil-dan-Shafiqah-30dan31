@@ -10,7 +10,7 @@
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
-    background: url = ('bg.png') center/cover no-repeat;
+    background: url = ('https://i.pinimg.com/736x/c7/8f/59/c78f5981832fea94f9efbb39896cf2d5.jpg') center/cover no-repeat;
     color: #ffffff;
     min-height: 100vh;
   }
