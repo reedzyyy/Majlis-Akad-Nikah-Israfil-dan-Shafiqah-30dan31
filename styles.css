@@ -10,7 +10,7 @@
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
-    background: src="bg.png" alt="bg"> center/cover no-repeat;
+    background: url('bg.png') center/cover no-repeat;
     color: #ffffff;
     min-height: 100vh;
   }
