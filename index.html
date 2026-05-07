@@ -29,12 +29,12 @@
   </div>
 </header>
 
-<section id="invitation">
+<section id="invitation" class="animate-on-scroll">
   <h2>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
   <p>Dengan penuh kesyukuran ke hadrat Ilahi, kami mempersilakan Dato’/Datin/Tuan/Puan/Encik/Cik seisi keluarga ke majlis perkahwinan Mohd Israfil Redzuan Bin Mohd Rizal & Nurul Shafiqah Binti Haniff yang akan berlangsung pada dan tempat seperti berikut:-</p>
 </section>
 
-<section id="details" class="details">
+<section id="details" class="details animate-on-scroll">
   <h2>Wedding Details</h2>
   <h3>Majlis Akad Nikah dan Walimatul Urus (Majlis Sanding Pihak Perempuan)</h3>
   <p><strong>Date:</strong> 30 August 2026</p>
@@ -46,7 +46,7 @@
   <p><strong>Venue:</strong> <a class="location-link" href=" https://maps.app.goo.gl/n9fXCZYMEMZPJtho9?g_st=iw" target="_blank">Kg. Pantai Emas, Kota Belud</a></p>
 </section>
 
-<section>
+<section class="animate-on-scroll">
   <h2>Countdown</h2>
   <div id="countdown" class="countdown"></div>
 </section>
@@ -78,6 +78,19 @@
       document.getElementById("countdown").innerHTML = "It's Wedding Time!";
     }
   }, 1000);
+
+  // Scroll Animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
 </script>
 
 
