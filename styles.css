@@ -90,6 +90,33 @@
     transform: scale(0.95);
   }
 
+  .portrait::after {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    pointer-events: none;
+  }
+
+  .portrait:first-child:hover::after {
+    content: "wears blue !";
+    color: rgb(109, 143, 255);
+    opacity: 1;
+  }
+
+  .portrait:last-child:hover::after {
+    content: "wears pink !";
+    color: pink;
+    opacity: 1;
+  }
+
   .portrait-name {
     margin: 0;
     color: #ffffff;
