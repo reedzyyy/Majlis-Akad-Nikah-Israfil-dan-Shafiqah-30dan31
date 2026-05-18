@@ -11,7 +11,7 @@
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
-    background: url('379.jpg') center/cover no-repeat;
+    background: url('WhatsApp Image 2026-05-18 at 5.17.55 PM.jpeg') center/cover no-repeat;
     color: #ffffff;
     min-height: 100vh;
   }
@@ -36,7 +36,7 @@
     position: relative;
     overflow: hidden;
     animation: slideDown 1s ease-out;
-  }
+  } 
 
   header::after {
     content: '';
@@ -183,7 +183,7 @@
   .countdown {
     font-size: 2em;
     margin-top: 20px;
-    color: #ffffff;
+    color: #b885bd;
     font-weight: 700;
     display: inline-block;
     animation: heartbeat 1.2s ease-in-out infinite;
